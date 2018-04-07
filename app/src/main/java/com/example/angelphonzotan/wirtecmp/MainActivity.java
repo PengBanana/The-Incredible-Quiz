@@ -78,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
     private void dbManipulate() {
         db.onUpgrade(db.getWritableDatabase(), 1,2);
         Log.d("MainActivity","dbManipulate-START");
+
         //create question
         //General questions - Type 1 (True or False)
         Question question;
@@ -92,6 +93,24 @@ public class MainActivity extends AppCompatActivity {
         question = new Question("FALSE","1","TRUE","FALSE","","","The tail of a comet always points towards the Sun.");
         db.addQuestion(question);
         question = new Question("FALSE","1","TRUE","FALSE","","","Photosynthesis is a process that is reductive, endergonic and catabolic.");
+        db.addQuestion(question);
+        question = new Question("FALSE","1","TRUE","FALSE","","","The record for most needles inserted into the head is 15,000.");
+        db.addQuestion(question);
+        question = new Question("TRUE","1","TRUE","FALSE","","","The longest distance swam underwater in one breath is 200metres.");
+        db.addQuestion(question);
+        question = new Question("TRUE","1","TRUE","FALSE","","","The heaviest aircraft pulled by a single man weighed 188.83 tonnes and was pulled 8.8 metres.");
+        db.addQuestion(question);
+        question = new Question("FALSE","1","TRUE","FALSE","","","The record for the fastest time to solve a Rubik’s Cube one-handed is 37 seconds. ");
+        db.addQuestion(question);
+        question = new Question("TRUE","1","TRUE","FALSE","","","The world’s tallest living man is 251cm / 8 ft 3 in.");
+        db.addQuestion(question);
+        question = new Question("FALSE","1","TRUE","FALSE","","","The record for the longest rail tunnel is held by the Channel Tunnel between Britain and France");
+        db.addQuestion(question);
+        question = new Question("FALSE","1","TRUE","FALSE","","","Lithium has the atomic number 17.");
+        db.addQuestion(question);
+        question = new Question("FALSE","1","TRUE","FALSE","","","The oldest building in the world is the Pyramid of Djoser in Egypt.");
+        db.addQuestion(question);
+        question = new Question("TRUE","1","TRUE","FALSE","","","Hotmail was launched in 1996.");
         db.addQuestion(question);
 
         //General questions - Type 2 (Multiple Choice)
@@ -139,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
 
         //create winners
         dbuserpopulate();
+
         //question new Quetion(asdvnbahjdbas)
         //add to databaseq
         //ex:db.addBook(question));
