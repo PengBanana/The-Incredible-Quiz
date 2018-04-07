@@ -79,19 +79,65 @@ public class MainActivity extends AppCompatActivity {
         db.onUpgrade(db.getWritableDatabase(), 1,2);
         Log.d("MainActivity","dbManipulate-START");
         //create question
+        //General questions - Type 1 (True or False)
         Question question;
+        question = new Question("TRUE","1","TRUE","FALSE","","","If 8+2=16106, then is 9+4=36135 ?");
+        db.addQuestion(question);
+        question = new Question("TRUE","1","TRUE","FALSE","","","A communicable disease can be passed on from one person to another.");
+        db.addQuestion(question);
+        question = new Question("TRUE","1","TRUE","FALSE","","","The three states of matter are solid, liquid and gas.");
+        db.addQuestion(question);
+        question = new Question("TRUE","1","TRUE","FALSE","","","The science that deals with the study of sound is known as acoustics.");
+        db.addQuestion(question);
+        question = new Question("FALSE","1","TRUE","FALSE","","","The tail of a comet always points towards the Sun.");
+        db.addQuestion(question);
+        question = new Question("FALSE","1","TRUE","FALSE","","","Photosynthesis is a process that is reductive, endergonic and catabolic.");
+        db.addQuestion(question);
+
+        //General questions - Type 2 (Multiple Choice)
         question = new Question("Yes","2","Yes","No","Maybe","HELLO","Is This A GAME?");
         db.addQuestion(question);
         question = new Question("0","2","35","0","46","50","How many animals are there in Moses' Ark?");
         db.addQuestion(question);
         question = new Question("Not an Animal", "2", "Fish", "Mermaid", "Swordfish", "Human", "In the fairy tail Mermaid Princess, what animal is Arial?");
         db.addQuestion(question);
-        question = new Question("TRUE","1","TRUE","FALSE","","","If 8+2=16106, then is 9+4=36135 ?");
-        db.addQuestion(question);
         question = new Question("Pork","2","Cow","Pork","Wild Pig","Pig","If fish is to fish and chicken is to chicken then pig is to?");
         db.addQuestion(question);
         question = new Question("Boilers","2","Hamsters","Captains","Boilers","God","Is the Titanic run by?");
         db.addQuestion(question);
+        question = new Question("Mars","2","Mars","Venus","Jupiter","Mercury","Which planet is known as the Red Planet?");
+        db.addQuestion(question);
+        question = new Question("Alexander Flemming","2","Watson and Crick","Alexander Flemming","Louis Pasteur","Robert Koch","Who discovered Penicillin?");
+        db.addQuestion(question);
+        question = new Question("Oxygen","2","Oxygen","Petrol","Carbon","Nitrogen","Which of the following is necessary for burning (combustion)?");
+        db.addQuestion(question);
+        question = new Question("On the Moon","2","Near the Bermuda Triangle","In the Atlantic Ocean","On the Moon","In the Pacific Ocean","Where is the Sea of Tranquility?");
+        db.addQuestion(question);
+        question = new Question("Coal","2","Nylon","Coal","Bakelite","Sand","Which of the following has an organic origin?");
+        db.addQuestion(question);
+        question = new Question("William Harvey","2","William Harvey","Louis Pasteur","Hargobind Khorana","Edward Jenner","Who discovered the circulation of blood?");
+        db.addQuestion(question);
+        question = new Question("Edward Jenner","2","Kylie Jenner","Edward Jenner","Robert Jenner","Valentina Jenner","Who pioneered the world's first vaccine?");
+        db.addQuestion(question);
+        question = new Question("Water","2","Hydrochloric Acid","Aqua Regia","Water","Juice","What is known as the universal solvent?");
+        db.addQuestion(question);
+        question = new Question("Proteins","2","Proteins","Vitamins","Fats","Carbohydrates","Enzymes and anti-bodies are mainly made of?");
+        db.addQuestion(question);
+        question = new Question("Radium","2","Platinum","Radium","Plutonium","Uranium","Which rare element would you associate with Marie and Pierre Curie?");
+        db.addQuestion(question);
+        question = new Question("Carbon Dioxide","2","Carbon Dioxide","Nitrogen","Oxygen","Ozone","Which gas evolves when charcoal is burnt?");
+        db.addQuestion(question);
+        question = new Question("Star","2","Comet","Star","Huge Planet","Satellite","The Sun is a?");
+        db.addQuestion(question);
+        question = new Question("Charles Darwin","2","Stephen Hawking","Louis Pasteur","Alexander Flemming","Charles Darwin","Who wrote the book 'The Origin of Species'?");
+        db.addQuestion(question);
+        question = new Question("206","2","196","619","206","512","What is the total number of bones in the human body?");
+        db.addQuestion(question);
+        question = new Question("Lava","2","Crater","Lava","Firestone","Magmastone","What is the name given to molten rocks erupted by a volcano?");
+        db.addQuestion(question);
+        question = new Question("Atmosphere","2","Lithosphere","Hydrosphere","Biosphere","Atmosphere","The Earth is surrounded by an insulating blanket of gases which protects it from the light and heat of the Sun. This insulating layer is called the?");
+
+        //create winners
         dbuserpopulate();
         //question new Quetion(asdvnbahjdbas)
         //add to databaseq
