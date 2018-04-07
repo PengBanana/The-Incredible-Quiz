@@ -6,14 +6,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import java.util.List;
+import java.util.ArrayList;
 
 /**
  * Created by Anjoh on 13/03/2018.
  */
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder> {
-    private List<User> UserList;
+    private ArrayList<User> UserList;
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView name, time;
@@ -26,8 +26,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder> 
     }
 
 
-    public UserAdapter(List<User> RestaurantList) {
-        this.UserList = RestaurantList;
+    public UserAdapter(ArrayList<User> UserList) {
+        this.UserList = UserList;
     }
 
     @Override
@@ -40,9 +40,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.MyViewHolder> 
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        User restaurant = UserList.get(position);
-        holder.name.setText(restaurant.getName());
-        holder.time.setText(restaurant.getTime());
+        User user = UserList.get(position);
+        holder.name.setText(user.getName());
+        holder.time.setText(user.getTime());
 
     }
 

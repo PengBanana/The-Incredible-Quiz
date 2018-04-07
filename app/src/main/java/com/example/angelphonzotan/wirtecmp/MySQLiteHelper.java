@@ -60,7 +60,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         String CREATE_WINNERS_TABLE = "CREATE TABLE Winners ( " +
                 "Winid INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "Winname TEXT, "+
-                "Windate DATE)";
+                "Windate TEXT)";
 
         // create question table
         db.execSQL(CREATE_QUESTION_TABLE);

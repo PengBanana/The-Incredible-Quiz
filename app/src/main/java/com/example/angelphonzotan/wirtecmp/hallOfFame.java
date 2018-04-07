@@ -19,10 +19,13 @@ public class hallOfFame extends AppCompatActivity {
     private ArrayList<User> UserList = new ArrayList<>();
     private RecyclerView recyclerView;
     private UserAdapter mAdapter;
+    private MySQLiteHelper db = new MySQLiteHelper(this);
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.halloffame);
+        UserList.addAll(db.getAllWinners());
+        //prepareUserData();
         recyclerView = (RecyclerView) findViewById(R.id.winners);
 
         mAdapter = new UserAdapter(UserList);
@@ -38,7 +41,7 @@ public class hallOfFame extends AppCompatActivity {
 
             };
         });
-        prepareUserData();
+
 
     }
 

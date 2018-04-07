@@ -92,10 +92,33 @@ public class MainActivity extends AppCompatActivity {
         db.addQuestion(question);
         question = new Question("Boilers","2","Hamsters","Captains","Boilers","God","Is the Titanic run by?");
         db.addQuestion(question);
+        dbuserpopulate();
         //question new Quetion(asdvnbahjdbas)
         //add to databaseq
         //ex:db.addBook(question));
         Log.d("MainActivity","dbManipulate-END");
+    }
+
+    private void dbuserpopulate() {
+        User user;
+        user = new User("alvin", "10");
+        db.addWinner(user);
+        user = new User("alvin", "10");
+        db.addWinner(user);
+        user = new User("alvin", "10");
+        db.addWinner(user);
+        user = new User("alvin", "10");
+        db.addWinner(user);
+        user = new User("alvin", "10");
+        db.addWinner(user);
+        user = new User("alvin", "10");
+        db.addWinner(user);
+        user = new User("alvin", "10");
+        db.addWinner(user);
+        user = new User("alvin", "10");
+        db.addWinner(user);
+        user = new User("alvin", "10");
+        db.addWinner(user);
     }
     /*private final SensorEventListener sensorListener = new SensorEventListener() {
         @Override
