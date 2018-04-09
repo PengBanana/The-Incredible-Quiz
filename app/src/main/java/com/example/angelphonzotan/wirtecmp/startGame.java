@@ -324,7 +324,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
 
     private void prepareQuestions() {
         getAllQuestion();
-        numQuestions = 30;
+        numQuestions = 40;
         Random rand = new Random();
         int randInt = rand.nextInt(questions.size());
         setUpUi(randInt);
@@ -340,6 +340,39 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
     private void setUpUi(int rand) {
         TextView tv_questionNo = (TextView) findViewById(R.id.questionNo);
         setContentView(R.layout.startgame);
+        if(lives==2){
+            ImageView h = findViewById(R.id.heart3);
+            h.setVisibility(View.INVISIBLE);
+
+
+        }
+        if(lives==1){
+            ImageView h = findViewById(R.id.heart3);
+            h.setVisibility(View.INVISIBLE);
+            ImageView h2 = findViewById(R.id.heart2);
+            h2.setVisibility(View.INVISIBLE);
+        }
+        if(skips==2){
+            ImageView h = findViewById(R.id.skip3);
+            h.setVisibility(View.INVISIBLE);
+
+
+        }
+        if(skips==1){
+            ImageView h = findViewById(R.id.skip3);
+            h.setVisibility(View.INVISIBLE);
+            ImageView h2 = findViewById(R.id.skip2);
+            h2.setVisibility(View.INVISIBLE);
+        }
+
+        if(skips==0){
+            ImageView h = findViewById(R.id.skip3);
+            h.setVisibility(View.INVISIBLE);
+            ImageView h2 = findViewById(R.id.skip2);
+            h2.setVisibility(View.INVISIBLE);
+            ImageView h3= findViewById(R.id.skip);
+            h3.setVisibility(View.INVISIBLE);
+        }
         tv_questionNo.setText("No:" + questionNo);
         currentQ = questions.get(rand);
         Button b = findViewById(R.id.main_menu);
@@ -619,6 +652,39 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
 
                 TextView questNo = findViewById(R.id.questionNo);
                 questNo.setText("Question No: "+questionNo);
+                if(lives==2){
+                    ImageView h = findViewById(R.id.heart3);
+                    h.setVisibility(View.INVISIBLE);
+
+
+                }
+                if(lives==1){
+                    ImageView h = findViewById(R.id.heart3);
+                    h.setVisibility(View.INVISIBLE);
+                    ImageView h2 = findViewById(R.id.heart2);
+                    h2.setVisibility(View.INVISIBLE);
+                }
+
+                if(skips==2){
+                    ImageView h = findViewById(R.id.skip3);
+                    h.setVisibility(View.INVISIBLE);
+
+
+                }
+                if(skips==1){
+                    ImageView h = findViewById(R.id.skip3);
+                    h.setVisibility(View.INVISIBLE);
+                    ImageView h2 = findViewById(R.id.skip2);
+                    h2.setVisibility(View.INVISIBLE);
+                }
+                if(skips==0){
+                    ImageView h = findViewById(R.id.skip3);
+                    h.setVisibility(View.INVISIBLE);
+                    ImageView h2 = findViewById(R.id.skip2);
+                    h2.setVisibility(View.INVISIBLE);
+                    ImageView h3= findViewById(R.id.skip);
+                    h3.setVisibility(View.INVISIBLE);
+                }
                 Button b = findViewById(R.id.main_menu);
                 b.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -833,6 +899,39 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
 
                     ;
                 });
+                if(lives==2){
+                    ImageView h = findViewById(R.id.heart3);
+                    h.setVisibility(View.INVISIBLE);
+
+
+                }
+                if(lives==1){
+                    ImageView h = findViewById(R.id.heart3);
+                    h.setVisibility(View.INVISIBLE);
+                    ImageView h2 = findViewById(R.id.heart2);
+                    h2.setVisibility(View.INVISIBLE);
+                }
+                if(skips==2){
+                    ImageView h = findViewById(R.id.skip3);
+                    h.setVisibility(View.INVISIBLE);
+
+
+                }
+                if(skips==1){
+                    ImageView h = findViewById(R.id.skip3);
+                    h.setVisibility(View.INVISIBLE);
+                    ImageView h2 = findViewById(R.id.skip2);
+                    h2.setVisibility(View.INVISIBLE);
+                }
+                if(skips==0){
+                    ImageView h = findViewById(R.id.skip3);
+                    h.setVisibility(View.INVISIBLE);
+                    ImageView h2 = findViewById(R.id.skip2);
+                    h2.setVisibility(View.INVISIBLE);
+                    ImageView h3= findViewById(R.id.skip);
+                    h3.setVisibility(View.INVISIBLE);
+                }
+
                 TextView questNo = findViewById(R.id.questionNo);
                 questNo.setText("Question No: "+questionNo);
 
@@ -847,6 +946,38 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
             }
             else {
                 setContentView(R.layout.startgame);
+                if(lives==2){
+                    ImageView h = findViewById(R.id.heart3);
+                    h.setVisibility(View.INVISIBLE);
+
+
+                }
+                if(lives==1){
+                    ImageView h = findViewById(R.id.heart3);
+                    h.setVisibility(View.INVISIBLE);
+                    ImageView h2 = findViewById(R.id.heart2);
+                    h2.setVisibility(View.INVISIBLE);
+                }
+                if(skips==2){
+                    ImageView h = findViewById(R.id.skip3);
+                    h.setVisibility(View.INVISIBLE);
+
+
+                }
+                if(skips==1){
+                    ImageView h = findViewById(R.id.skip3);
+                    h.setVisibility(View.INVISIBLE);
+                    ImageView h2 = findViewById(R.id.skip2);
+                    h2.setVisibility(View.INVISIBLE);
+                }
+                if(skips==0){
+                    ImageView h = findViewById(R.id.skip3);
+                    h.setVisibility(View.INVISIBLE);
+                    ImageView h2 = findViewById(R.id.skip2);
+                    h2.setVisibility(View.INVISIBLE);
+                    ImageView h3= findViewById(R.id.skip);
+                    h3.setVisibility(View.INVISIBLE);
+                }
                 TextView questNo = findViewById(R.id.questionNo);
                 questNo.setText("Question No: "+questionNo);
 

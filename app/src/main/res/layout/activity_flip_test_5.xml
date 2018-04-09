@@ -153,7 +153,7 @@
         app:layout_constraintVertical_bias="0.957" />
 
     <TextView
-        android:id="@+id/count"
+        android:id="@+id/quest"
         android:layout_width="153dp"
         android:layout_height="110dp"
         android:layout_marginBottom="8dp"
@@ -170,7 +170,7 @@
         app:layout_constraintVertical_bias="0.145" />
 
     <TextView
-        android:id="@+id/count4"
+        android:id="@+id/count"
         android:layout_width="153dp"
         android:layout_height="110dp"
         android:layout_marginBottom="8dp"
