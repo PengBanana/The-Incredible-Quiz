@@ -338,8 +338,9 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
     }
 
     private void setUpUi(int rand) {
-        TextView tv_questionNo = (TextView) findViewById(R.id.questionNo);
+
         setContentView(R.layout.startgame);
+        TextView tv_questionNo = (TextView) findViewById(R.id.questionNo);
         if(lives==2){
             ImageView h = findViewById(R.id.heart3);
             h.setVisibility(View.INVISIBLE);
