@@ -3,6 +3,7 @@ package com.example.angelphonzotan.wirtecmp;
 import android.content.Context;
 import android.content.Intent;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private float aCelVal; //current accerleration
     private float aCelLast;
     private float shake;
+    private MediaPlayer mp;
     TextView sample;
     public MySQLiteHelper db = new MySQLiteHelper(this);
     @Override
@@ -47,25 +49,29 @@ public class MainActivity extends AppCompatActivity {
         sm = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         //sm.registerListener(sensorListener, sm.getDefaultSensor(Sensor.TYPE_ACCELEROMETER), SensorManager.SENSOR_DELAY_NORMAL);
         Button b = findViewById(R.id.button);
+        mp = MediaPlayer.create(this, R.raw.coin);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                goToFirstQuestion();
-            };
+            }
         });
         b = findViewById(R.id.button2);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 goToHall();
-            };
+            }
         });
         Button c = findViewById(R.id.button3);
         c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.start();
                 goToRules();
-            };
+            }
         });
         aCelVal = SensorManager.GRAVITY_EARTH;
         aCelLast = SensorManager.GRAVITY_EARTH;
@@ -102,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         db.addQuestion(question);
         question = new Question("FALSE","1","TRUE","FALSE","","","The record for the fastest time to solve a Rubik’s Cube one-handed is 37 seconds. ");
         db.addQuestion(question);
-        question = new Question("TRUE","1","TRUE","FALSE","","","The world’s tallest living man is 251cm / 8 ft 3 in.");
+        /*question = new Question("TRUE","1","TRUE","FALSE","","","The world’s tallest living man is 251cm / 8 ft 3 in.");
         db.addQuestion(question);
         question = new Question("FALSE","1","TRUE","FALSE","","","The record for the longest rail tunnel is held by the Channel Tunnel between Britain and France");
         db.addQuestion(question);
@@ -112,6 +118,8 @@ public class MainActivity extends AppCompatActivity {
         db.addQuestion(question);
         question = new Question("TRUE","1","TRUE","FALSE","","","Hotmail was launched in 1996.");
         db.addQuestion(question);
+        question = new Question("TRUE","1","TRUE","FALSE","","","From the ground to the torch, the Statue of Liberty is 93 metres high.");
+        db.addQuestion(question);*/
 
         //General questions - Type 2 (Multiple Choice)
         question = new Question("Yes","2","Yes","No","Maybe","HELLO","Is This A GAME?");
@@ -134,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
         db.addQuestion(question);
         question = new Question("Coal","2","Nylon","Coal","Bakelite","Sand","Which of the following has an organic origin?");
         db.addQuestion(question);
-        question = new Question("William Harvey","2","William Harvey","Louis Pasteur","Hargobind Khorana","Edward Jenner","Who discovered the circulation of blood?");
+        /*question = new Question("William Harvey","2","William Harvey","Louis Pasteur","Hargobind Khorana","Edward Jenner","Who discovered the circulation of blood?");
         db.addQuestion(question);
         question = new Question("Edward Jenner","2","Kylie Jenner","Edward Jenner","Robert Jenner","Valentina Jenner","Who pioneered the world's first vaccine?");
         db.addQuestion(question);
@@ -155,6 +163,7 @@ public class MainActivity extends AppCompatActivity {
         question = new Question("Lava","2","Crater","Lava","Firestone","Magmastone","What is the name given to molten rocks erupted by a volcano?");
         db.addQuestion(question);
         question = new Question("Atmosphere","2","Lithosphere","Hydrosphere","Biosphere","Atmosphere","The Earth is surrounded by an insulating blanket of gases which protects it from the light and heat of the Sun. This insulating layer is called the?");
+        db.addQuestion(question);*/
 
         //create winners
         dbuserpopulate();

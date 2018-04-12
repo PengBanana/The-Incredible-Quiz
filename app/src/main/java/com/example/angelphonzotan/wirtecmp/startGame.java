@@ -6,6 +6,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -40,6 +41,8 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
     private int numQuestions;
     private int numFlipQuestionNo = 1;
     private int numMotionQuestionNo = 1;
+    private MediaPlayer mp;
+
 
     private String currentpos = "down";
     private int count = 0;
@@ -85,6 +88,8 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.startgame);
+
+        mp = MediaPlayer.create(this, R.raw.coin);
 
         lives = 3;
         skips = 3;
@@ -543,6 +548,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
             startActivity(i);
 
         } else if (currentQ.getAnswer().equals(ans)||ans.equals("skip")) {
+            mp.start();
             questionNo++;
             if (questionNo > numQuestions) {
                 finish();
@@ -997,6 +1003,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
                 Intent i = new Intent(this, Game_Over.class);
                 startActivity(i);
             }
+
         }
     }
 
