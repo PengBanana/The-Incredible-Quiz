@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gamebg"
-    tools:context=".Pinch_Test">
+    android:background="@drawable/gamebg">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -29,7 +28,7 @@
             android:layout_height="35dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            app:srcCompat="@mipmap/finalheart2f"
+            app:srcCompat="@mipmap/thearforeground"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="8dp" />
 
@@ -38,7 +37,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/finalheart2f"
+            app:srcCompat="@mipmap/thearforeground"
             tools:layout_editor_absoluteY="468dp" />
 
         <ImageView
@@ -46,7 +45,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/finalheart2f"
+            app:srcCompat="@mipmap/thearforeground"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="22dp" />
     </LinearLayout>
@@ -109,10 +108,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.067" />
 
     <Button
         android:id="@+id/skipbutton"
@@ -165,7 +163,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.474">
+        app:layout_constraintVertical_bias="0.857">
 
         <TextView
             android:id="@+id/textView2"
@@ -176,28 +174,65 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttrans"
+            android:padding="5dp"
             android:text="proceed"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
             android:visibility="invisible" />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/stat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
-
-    <TextView
         android:id="@+id/textView12"
-        android:layout_width="112dp"
-        android:layout_height="58dp"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Prepare you hand gun"
-        app:layout_constraintBottom_toTopOf="@+id/linear"
+        android:background="@drawable/questiontrans"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Prepare the sling shot and FIRE!"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <ImageView
+        android:id="@+id/firstsling"
+        android:layout_width="176dp"
+        android:layout_height="209dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/slin"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.558" />
+
+    <ImageView
+        android:id="@+id/readysling"
+        android:layout_width="207dp"
+        android:layout_height="216dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/readysling"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.236"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
+
 </android.support.constraint.ConstraintLayout>
