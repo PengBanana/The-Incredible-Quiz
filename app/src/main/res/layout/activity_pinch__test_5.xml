@@ -7,7 +7,7 @@
     android:background="@drawable/gamebg">
 
     <TextView
-        android:id="@+id/questionNo2"
+        android:id="@+id/questionNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -249,7 +249,7 @@
         android:gravity="center"
         android:padding="10dp"
         android:textAlignment="center"
-        android:textColor="@android:style/Widget.ListView.White"
+        android:textColor="@android:color/white"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -244,7 +244,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
                     }
                     if (z > 0 && !cocked) {
                         cocked = true;
-                        ((TextView)findViewById(R.id.question)).setText("cocked");
+                       
                     }
                 }
                 else if(questionNo==16) {
