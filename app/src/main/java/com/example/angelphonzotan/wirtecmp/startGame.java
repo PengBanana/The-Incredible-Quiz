@@ -138,6 +138,8 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
             if (mAccel > 6) {
                 if(questionNo==2){
                     if (y > 0) {
+                        findViewById(R.id.imageView6).setVisibility(View.VISIBLE);
+                        findViewById(R.id.imageView6).setVisibility(View.INVISIBLE);
                         ((Button) findViewById(R.id.button)).setVisibility(View.VISIBLE);
                     }
                 }
@@ -1127,8 +1129,8 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
             }
 
             else if(motionEvent2.getY() - motionEvent1.getY() > 100 && !cocked){
-
-
+                findViewById(R.id.firstsling).setVisibility(View.VISIBLE);
+                findViewById(R.id.readysling).setVisibility(View.INVISIBLE);
                 cocked = true;
 
 
