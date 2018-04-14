@@ -1058,7 +1058,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
     @Override
     public boolean onFling(MotionEvent motionEvent1, MotionEvent motionEvent2, float v, float v1) {
         if(questionNo==9) {
-            findViewById(R.id.button).setVisibility(View.VISIBLE);
+
             if(rubs >= 100){
                 findViewById(R.id.button).setVisibility(View.VISIBLE);
             }
@@ -1130,7 +1130,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
 
 
                 cocked = true;
-                TextView t = findViewById(R.id.stat);
+
 
 
             }
