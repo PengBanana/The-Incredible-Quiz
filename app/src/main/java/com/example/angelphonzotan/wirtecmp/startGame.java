@@ -374,7 +374,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
             ImageView h3= findViewById(R.id.skip);
             h3.setVisibility(View.INVISIBLE);
         }
-        tv_questionNo.setText("No:" + questionNo);
+        tv_questionNo.setText("Question No: " + questionNo);
         currentQ = questions.get(rand);
         Button b = findViewById(R.id.main_menu);
         b.setOnClickListener(new View.OnClickListener() {
