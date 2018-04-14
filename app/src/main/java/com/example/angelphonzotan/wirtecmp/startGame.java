@@ -244,7 +244,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
                     }
                     if (z > 0 && !cocked) {
                         cocked = true;
-                       
+
                     }
                 }
                 else if(questionNo==16) {
