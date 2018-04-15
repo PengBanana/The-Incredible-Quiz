@@ -811,7 +811,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
 
                 }
                 else if(questionNo == 11){
-                    setContentView(R.layout.activity_pinch__test_5);
+                    setContentView(R.layout.activity_pinch_test_5);
                     current = 1;
                     currentpos1 = 0;
                     lock = new TextView[5];
