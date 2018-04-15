@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gamebg"
-    tools:context=".Pinch_Test">
+    android:background="@drawable/gamebg">
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -29,7 +28,7 @@
             android:layout_height="35dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            app:srcCompat="@mipmap/finalheart2f"
+            app:srcCompat="@mipmap/thearforeground"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="8dp" />
 
@@ -38,7 +37,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/finalheart2f"
+            app:srcCompat="@mipmap/thearforeground"
             tools:layout_editor_absoluteY="468dp" />
 
         <ImageView
@@ -46,7 +45,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/finalheart2f"
+            app:srcCompat="@mipmap/thearforeground"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="22dp" />
     </LinearLayout>
@@ -109,10 +108,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.067" />
 
     <Button
         android:id="@+id/skipbutton"
@@ -154,14 +152,20 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="153dp"
-        android:layout_height="110dp"
+        android:layout_width="316dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/questiontrans"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="Follow the series differently"
+        android:textAlignment="gravity"
+        android:textColor="@android:color/white"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -171,14 +175,20 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="153dp"
-        android:layout_height="110dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/questiontrans"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="down"
+        android:textAlignment="gravity"
+        android:textColor="@android:color/white"
         android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -192,11 +202,15 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/buttrans"
+        android:padding="5dp"
         android:text="proceed"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
-        app:layout_constraintVertical_bias="0.766" />
+        app:layout_constraintVertical_bias="0.787" />
 </android.support.constraint.ConstraintLayout>

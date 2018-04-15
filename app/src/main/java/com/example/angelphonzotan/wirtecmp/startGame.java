@@ -143,6 +143,8 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
             if (mAccel > 6) {
                 if(questionNo==2){
                     if (y > 0) {
+                        findViewById(R.id.imageView6).setVisibility(View.VISIBLE);
+                        findViewById(R.id.imageView9).setVisibility(View.INVISIBLE);
                         ((Button) findViewById(R.id.button)).setVisibility(View.VISIBLE);
                     }
                 }
@@ -249,7 +251,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
                     }
                     if (z > 0 && !cocked) {
                         cocked = true;
-                        ((TextView)findViewById(R.id.question)).setText("cocked");
+
                     }
                 }
                 else if(questionNo==16) {
@@ -379,7 +381,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
             ImageView h3= findViewById(R.id.skip);
             h3.setVisibility(View.INVISIBLE);
         }
-        tv_questionNo.setText("No:" + questionNo);
+        tv_questionNo.setText("Question No: " + questionNo);
         currentQ = questions.get(rand);
         Button b = findViewById(R.id.main_menu);
         b.setOnClickListener(new View.OnClickListener() {
@@ -815,7 +817,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
 
                 }
                 else if(questionNo == 11){
-                    setContentView(R.layout.activity_pinch__test_5);
+                    setContentView(R.layout.activity_pinch_test_5);
                     current = 1;
                     currentpos1 = 0;
                     lock = new TextView[5];
@@ -1065,7 +1067,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
     @Override
     public boolean onFling(MotionEvent motionEvent1, MotionEvent motionEvent2, float v, float v1) {
         if(questionNo==9) {
-            findViewById(R.id.button).setVisibility(View.VISIBLE);
+
             if(rubs >= 100){
                 findViewById(R.id.button).setVisibility(View.VISIBLE);
             }
@@ -1134,10 +1136,10 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
             }
 
             else if(motionEvent2.getY() - motionEvent1.getY() > 100 && !cocked){
-
-
+                findViewById(R.id.readysling).setVisibility(View.VISIBLE);
+                findViewById(R.id.firstsling).setVisibility(View.INVISIBLE);
                 cocked = true;
-                TextView t = findViewById(R.id.stat);
+
 
 
             }

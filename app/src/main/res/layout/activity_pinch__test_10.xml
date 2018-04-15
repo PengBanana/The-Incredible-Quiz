@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Pinch_Test"
     android:background="@drawable/gamebg"
     tools:layout_editor_absoluteY="81dp">
 
@@ -30,7 +29,7 @@
             android:layout_height="35dp"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            app:srcCompat="@mipmap/finalheart2f"
+            app:srcCompat="@mipmap/thearforeground"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="8dp" />
 
@@ -39,7 +38,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/finalheart2f"
+            app:srcCompat="@mipmap/thearforeground"
             tools:layout_editor_absoluteY="468dp" />
 
         <ImageView
@@ -47,7 +46,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_weight="1"
-            app:srcCompat="@mipmap/finalheart2f"
+            app:srcCompat="@mipmap/thearforeground"
             tools:layout_editor_absoluteX="35dp"
             tools:layout_editor_absoluteY="22dp" />
     </LinearLayout>
@@ -110,10 +109,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.068" />
 
     <Button
         android:id="@+id/skipbutton"
@@ -166,7 +164,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81">
+        app:layout_constraintVertical_bias="0.857">
 
         <TextView
             android:id="@+id/textView2"
@@ -177,20 +175,29 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/buttrans"
+            android:padding="5dp"
             android:text="Proceed"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
             android:visibility="invisible" />
 
     </LinearLayout>
 
     <TextView
         android:id="@+id/dir"
-        android:layout_width="86dp"
-        android:layout_height="46dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/questiontrans"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="down"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -198,13 +205,18 @@
 
     <TextView
         android:id="@+id/dir2"
-        android:layout_width="127dp"
-        android:layout_height="73dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:background="@drawable/questiontrans"
+        android:gravity="center"
+        android:padding="10dp"
         android:text="Follow the series"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
