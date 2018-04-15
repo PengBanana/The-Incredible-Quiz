@@ -41,7 +41,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
     private int numQuestions;
     private int numFlipQuestionNo = 1;
     private int numMotionQuestionNo = 1;
-    private MediaPlayer mp, mp2;
+    private MediaPlayer mp, mp2, mp3;
 
 
     private String currentpos = "down";
@@ -91,6 +91,7 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
 
         mp = MediaPlayer.create(this, R.raw.coin);
         mp2 = MediaPlayer.create(this, R.raw.buzzer);
+        mp3 = MediaPlayer.create(this, R.raw.aww);
 
         lives = 3;
         skips = 3;
@@ -994,15 +995,17 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
                 nextQuestion();
             }
         } else {
-            mp2.start();
             lives--;
             if (lives == 2) {
+                mp2.start();
                 ImageView i = findViewById(R.id.heart3);
                 i.setVisibility(View.INVISIBLE);
             } else if (lives == 1) {
+                mp2.start();
                 ImageView i = findViewById(R.id.heart2);
                 i.setVisibility(View.INVISIBLE);
             } else if (lives == 0) {
+                mp3.start();
                 finish();
                 Intent i = new Intent(this, Game_Over.class);
                 startActivity(i);
