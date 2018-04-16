@@ -235,13 +235,15 @@ public class startGame extends AppCompatActivity implements SensorEventListener,
                 }
                 else if(questionNo==12) {
                     if (Math.abs(x) > Math.abs(y)) {
-                        if (x < 0) {
-                            change--;
+                        if(mAccel >8) {
+                            if (x < 0) {
+                                change--;
 
-                        }
-                        if (x > 0) {
-                            change++;
+                            }
+                            if (x > 0) {
+                                change++;
 
+                            }
                         }
                     }
                 }
